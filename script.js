@@ -3,7 +3,7 @@ const author = document.querySelector('.author')
 const genererBtn = document.querySelector('.generer')
 const tweetBtn = document.querySelector('.twitter-share-button');
 const getQuote = async () => {
-    const res = await fetch('https://type.fit/api/quotes');
+    const res = await fetch('/citations.json');
     const quotes = await res.json();
     const num = Math.floor(Math.random() * quotes.length);
     const item = quotes[num]
